@@ -139,3 +139,10 @@ Special thanks to [Jakub Szwacz](https://github.com/szwacz) for electron boilerp
 ### License
 
 MIT License
+
+
+# Git change remote:
+
+git remote set-url origin <url>
+
+git remote -v

@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "asar": "^0.7.2",
+    "electron-builder": "^22.1.0",
     "electron-prebuilt": "^0.35.1",
     "fs-jetpack": "^0.7.0",
     "gulp": "^3.9.0",
@@ -20,6 +21,26 @@
     "build": "gulp build",
     "release": "gulp release --env=production",
     "start": "node ./tasks/start",
+    "dist": "electron-builder",
+    "pack": "electron-builder --dir",
     "test": "node ./tasks/start --env=test"
+  },
+  "build": {
+    "appId": "yourappid", 
+    
+    "mac": {
+        "category": "your.app.category.type"
+      },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "NSIS",
+      "icon": "build/icon.ico"
+    } 
+  
   }
 }
